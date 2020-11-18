@@ -1,29 +1,12 @@
-import { useState } from "react";
-
-const Contador = () => {
-  const [counter, setCounter] = useState(0);
-
-  function handleAddCounter() {
-    setCounter(counter + 1);
-  }
-
-  return (
-    <div>
-      <h2>Contador!</h2>
-
-      <hr/>
-
-      <button type="button" onClick={handleAddCounter}>
-        +
-      </button>
-
-      <p>Valor: {counter}</p>
-    </div>
-  );
-};
+import Layout from "../components/Layout";
+import ImageScroller from "../components/ImageScroller";
 
 const Index = () => {
-  return <Contador />;
+  return (
+    <Layout>
+      <ImageScroller />
+    </Layout>
+  );
 };
 
 export default Index;
